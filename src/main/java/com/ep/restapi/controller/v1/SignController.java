@@ -37,8 +37,8 @@ public class SignController {
             @ApiParam(value = "회원 ID : 이메일",required = true) @RequestParam String uid,
             @ApiParam(value = "비밀번호 : 이메일",required = true) @RequestParam String password
     ) {
-        System.out.println(uid);
-        System.out.println(password);
+        System.out.println("uid : "+uid);
+        System.out.println("password : "+password);
         User user = userRepository.findByUid(uid).orElseThrow(CEmailSigninFailedException::new);
         System.out.println(user);
         if(!passwordEncoder.matches(password,user.getPassword())){
