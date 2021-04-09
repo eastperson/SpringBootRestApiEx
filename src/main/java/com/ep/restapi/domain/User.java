@@ -30,7 +30,7 @@ public class User implements UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long msrl;
 
-    @Column(nullable = false,unique = true,length = 30)
+    @Column(nullable = false,unique = true,length = 50)
     private String uid;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
@@ -39,6 +39,9 @@ public class User implements UserDetails {
 
     @Column(nullable = false,length = 100)
     private String name;
+
+    @Column(length = 100)
+    private String provider;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default

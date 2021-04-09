@@ -11,3 +11,13 @@ spring:
         encoding: UTF-8
     jwt:
         secret:eastperson123#@!
+social:
+    kakao:
+        client_id: ee7c2971235680f1f09fb9247f4c78da
+        redirect: /social/login/kakao
+        url:
+            login: https://kauth.kakao.com/oauth/authorize
+            token: https://kauth.kakao.com/oauth/token
+            profile: https://kapi.kakao.com/v2/user/me
+    url:
+        base: http://localhost:8080

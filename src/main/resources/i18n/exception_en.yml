@@ -13,3 +13,9 @@ entryPointException:
 accessDenied :
   code : "-1003"
   msg : "A resource that can not be accessed with the privileges it has."
+communicationError:
+  code: "-1004"
+  msg: "An error occurred during communication."
+existingUser:
+  code: "-1005"
+  msg: "이미 가입한 회원입니다. 로그인을 해주십시오."
